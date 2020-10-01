@@ -9,23 +9,28 @@ The Youtube stuff comes from [HERE](https://developers.google.com/youtube/iframe
 
 # How to use it ?
 
-Just
+Just add this to your dependencies in `package.json`:
 
-```bash
-npm install --save-dev @sveltecasts/svelte-youtube@0.0.5
-
+```json
+  "svelte-youtube": "https://github.com/zevaverbach/svelte-youtube.git",
 ````
 
 And in your Source Code under Script:
 
 ```
-import Youtube from "@sveltecasts/svelte-youtube";
+import Youtube from "svelte-youtube"
 
 <Youtube videoId="..." />
 ```
 
+## Methods
+- `play()`
+- `pause()`
+- `paused()`
+- `jumpTo(seconds)`
+- `position()`
 
-# Btw
+# YouTube Video About Its Making
 
 Here is a youtube video about this component:
 
