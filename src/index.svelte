@@ -67,7 +67,6 @@
 
   export function play() {
     player.playVideo();
-    console.log(player)
   }
 
   export function jumpTo(seconds) {
@@ -80,7 +79,6 @@
 
   export function paused() {
     const playerState = player.getPlayerState()
-    console.log(playerState)
     return [5, 2, -1].includes(playerState)
   }
 
