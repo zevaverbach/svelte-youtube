@@ -56,11 +56,11 @@
     return false;
   }
 
-  export position = () => player.getCurrentTime()
-  export play = () => player.playVideo()
-  export jumpTo = seconds => player.seekTo(seconds)
-  export pause = () => player.pauseVideo()
-  export paused = () => [5, 2, -1].includes(player.getPlayerState())
+  export function position() { player.getCurrentTime() }
+  export function play() { player.playVideo() }
+  export function jumpTo(seconds) { player.seekTo(seconds) }
+  export function pause() { player.pauseVideo() }
+  export function paused() { return [5, 2, -1].includes(player.getPlayerState()) }
 
 </script>
 
