@@ -4,8 +4,7 @@
 
 <script>
   let player;
-  import { createEventDispatcher, onMount } from "svelte";
-  const dispatch = createEventDispatcher();
+  import { onMount } from "svelte";
   let divId = "player_" + parseInt(Math.random() * 100000).toString();
   export let videoId;
   export let height = "390";
@@ -57,30 +56,11 @@
     return false;
   }
 
-  function onPlayerStateChange({ data }) {
-    dispatch("StateChange", data);
-  }
-
-  export function position() {
-    return player.getCurrentTime()
-  }
-
-  export function play() {
-    player.playVideo();
-  }
-
-  export function jumpTo(seconds) {
-    player.seekTo(seconds)
-  }
-
-  export function pause() {
-    player.pauseVideo()
-  }
-
-  export function paused() {
-    const playerState = player.getPlayerState()
-    return [5, 2, -1].includes(playerState)
-  }
+  export position = () => player.getCurrentTime()
+  export play = () => player.playVideo()
+  export jumpTo = seconds => player.seekTo(seconds)
+  export pause = () => player.pauseVideo()
+  export paused = () => [5, 2, -1].includes(player.getPlayerState())
 
 </script>
 
