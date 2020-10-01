@@ -4,12 +4,12 @@
 
 <script>
   let player;
-  import { onMount } from "svelte";
+  import { onMount, createEventDispatcher } from "svelte";
   let divId = "player_" + parseInt(Math.random() * 100000).toString();
   export let videoId;
   export let height = "390";
   export let width = "640";
-
+  const dispatch = createEventDispatcher()
   onMount(() => {
     let ytTagUrl = "https://www.youtube.com/iframe_api";
     if (!isMyScriptLoaded(ytTagUrl)) {
