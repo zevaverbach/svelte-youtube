@@ -32,6 +32,10 @@
         createPlayer();
       }
     });
+    
+   function onPlayerStateChange({ data }) {		
+     dispatch("StateChange", data);		  
+   }
     function createPlayer() {
       player = new YT.Player(divId, {
         height,
