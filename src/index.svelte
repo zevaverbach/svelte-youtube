@@ -60,7 +60,7 @@
     return false;
   }
 
-  export function position() { player.getCurrentTime() }
+  export function position() { return player.getCurrentTime() }
   export function play() { player.playVideo() }
   export function jumpTo(seconds) { player.seekTo(seconds) }
   export function pause() { player.pauseVideo() }
