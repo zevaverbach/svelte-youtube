@@ -60,11 +60,32 @@
   function onPlayerStateChange({ data }) {
     dispatch("StateChange", data);
   }
-  export function playVideo() {
-    player.playVideo();
+
+  export function position() {
+    return player.getCurrentTime()
   }
+
+  export function play() {
+    player.playVideo();
+    console.log(player)
+  }
+
+  export function jumpTo(seconds) {
+    player.seekTo(seconds)
+  }
+
+  export function pause() {
+    player.pauseVideo()
+  }
+
+  export function paused() {
+    const playerState = player.getPlayerState()
+    console.log(playerState)
+    return [5, 2, -1].includes(playerState)
+  }
+
 </script>
 
-<div class="yt-component">
+<span class="yt-component" style="float: left">
   <div id={divId} />
-</div>
+</span>
