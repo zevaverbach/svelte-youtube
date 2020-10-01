@@ -9,7 +9,7 @@ The Youtube stuff comes from [HERE](https://developers.google.com/youtube/iframe
 
 # How to use it ?
 
-Just add this to your dependencies in `package.json`:
+Just add this to your dependencies in `package.json`, then run `npm install`:
 
 ```json
   "svelte-youtube": "https://github.com/zevaverbach/svelte-youtube.git",
