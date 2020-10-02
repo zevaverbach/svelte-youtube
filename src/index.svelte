@@ -65,6 +65,15 @@
   export function jumpTo(seconds) { player.seekTo(seconds) }
   export function pause() { player.pauseVideo() }
   export function paused() { return [5, 2, -1].includes(player.getPlayerState()) }
+  export function buffering() { return player.getPlayerState() === 3 }
+  export function state() { return player.getPlayerState() }
+  export function toggle() {
+      if (paused()) {
+          play()
+      } else {
+          pause()
+      }
+  }
 
 </script>
 
