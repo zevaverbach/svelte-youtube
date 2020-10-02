@@ -69,9 +69,9 @@
   export function state() { return player.getPlayerState() }
   export function toggle() {
       if (paused()) {
-          play()
+          player.playVideo()
       } else {
-          pause()
+          player.pauseVideo()
       }
   }
 
