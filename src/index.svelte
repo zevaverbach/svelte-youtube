@@ -80,3 +80,8 @@
 <span class="yt-component" style="float: left">
   <div id={divId} />
 </span>
+<style>
+  .yt-component {
+    box-shadow: 15px 15px #111;
+  }
+</style>
